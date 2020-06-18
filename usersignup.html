@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script type="text/javascript">
+function validateform()
+{ 
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var p=document.myform.ph.value;
+ if( p== "" || isNaN(p) ||p.length != 10 )
+{
+alert( "Please enter valid phone number.." );
+
+return false;
+}
+var a=document.myform.pass.value;
+var b=document.myform.repas.value;
+
+if(a!=b)
+{
+alert( "Please re-enter correct  password.." );
+
+return false;
+}
+
+}
+		</script>
+
+<title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style2.css"></head>
+<body>
+    <div class="loginbox">
+        <img src="2a.png" class="avatar">
+        <h1>SignUp Here</h1>
+       <form name="myform" onsubmit="return validateform()" method="post" action="signup.jsp">
+            <p>Username</p>
+            <input type="text" name="uname" placeholder="Ener Username" required>
+            <p>Password</p>
+            <input type="password" name="pass" placeholder="create Password" required>
+            <p>E-mail</p>
+            <input type="email" name="email" placeholder="enter E-mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+            <p>Phone No</p>
+            <input type="text" name="ph" placeholder="enter phone number" required>
+            <p>Address</p>
+            <input type="text" name="address" placeholder="enter Address" required>
+            <input type="password" name="repas" placeholder="confirm password" required >
+            <input type="submit"  value="submit">
+            
+             <button type="button" onclick="location.href='userlogin.html?#'">Sign In </button><br><br>
+            <h2>USER</h2>
+            
+            
+        </form>
+            
+        
+        
+        
+    </div>
+    
+
+</body>
+
+</html>
